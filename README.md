@@ -2,7 +2,7 @@
 a anomaly detector using lstm
 One way is as follows: Use LSTMs to build a prediction model, 
 i.e. given current and past values, predict next few steps in the time-series. 
-Then, error in prediction gives an indication of anomaly (LSTM-AD [1]). 
+Then, error in prediction gives an indication of anomaly. 
 For example, if prediction error is high, then it indicates anomaly.
 Note: This assumes that the normal time-series is predictable to some extent.
 
@@ -21,13 +21,13 @@ epochs = 1 #One Epoch is when an ENTIRE dataset is passed forward and backward t
 batch_size = 50 # one epoch is too big to feed to the computer at once we divide it in several smaller batches 
 
 
-FUNCTIONS EXPLAINATION
+FUNCTIONS EXPLAINATION.
 1.) DROPIN FUCTION 
-The name suggests the inverse of dropout, i.e. adding more samples. See Data Augmentation section at
+The name suggests the inverse of dropout, i.e. adding more samples. See Data Augmentation section at .
     http://simaaron.github.io/Estimating-rainfall-from-weather-radar-readings-using-recurrent-neural-networks/
-    :param X: Each row is a training sequence
-    :param y: Tne target we train and will later predict
-    :return: new augmented X, y
+    :param X: Each row is a training sequence.
+    :param y: Tne target we train and will later predict.
+    :return: new augmented X, y.
 Two arrays are declared...the content is appended and then they are converted to numpy array with the help of the function np.asarray(parameters)
 this is what they do in the dropin function
 
