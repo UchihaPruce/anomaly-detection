@@ -11,28 +11,8 @@ Another way is to directly use LSTM as a classifier with two classes: normal and
 Prediction model based approach is better when anomalous instances are not easily available whereas a classifier based approach 
 is more suitable when there are sufficient labeled instances of both normal and anomalous instances.
 
-Edit 1:
-Recently, LSTM autoencoders and encoder-decoder frameworks have been used as reconstruction models where some form of reconstruction error is used as a measure of anomaly. 
-The idea behind such models is: autoencoder is trained to reconstruct the normal time-series and it is assumed that such a model would do badly to 
-reconstruct the anomalous time-series having not seen them during training.
-
-Examples of such models include Encoder Decoder models [2], 
-Variational Autoencoders [3], 
-Denoising Autoencoders [4], 
-Energy Based Models (EBM) [5]. 
-These include both recurrent neural networks (RNN) and feedforward networks. 
-These models have been used for anomaly detection in ECGs, engines, power demand, network (failures/intrusions), 
-and novelty detection in music, etc.
-
-please research on the above contents to understand lstms 
-
-
-
-
 READ THIS PAPER TO KNOW MORE ABOUT LSTM
 https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2015-56.pdf
-
-
 
 
 sequence_length = 50   #the sequence at which it  must iterate 
